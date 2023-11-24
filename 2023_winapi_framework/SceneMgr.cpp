@@ -2,15 +2,29 @@
 #include "SceneMgr.h"
 #include "Start_Scene.h"
 #include "Game_Scene.h"
+#include "StartScene.h"
+#include "MainScene.h"
+#include "SubSceneOne.h"
+#include "SubSceneTwo.h"
+#include "EndScene.h"
+
 void SceneMgr::Init()
 {
 	m_pCurScene = nullptr;
 	// ¾À µî·Ï
+	// ¼±»ý´Ô ¾À
 	RegisterScene(L"Start_Scene",std::make_shared<Start_Scene>());
 	RegisterScene(L"Game_Scene", std::make_shared<Game_Scene>());
 
+	// ¿ì¸® ¾À
+	RegisterScene(L"StartScene", std::make_shared<StartScene>());
+	RegisterScene(L"MainScene", std::make_shared<MainScene>());
+	RegisterScene(L"SubSceneOne", std::make_shared<SubSceneOne>());
+	RegisterScene(L"SubSceneTwo", std::make_shared<SubSceneTwo>());
+	RegisterScene(L"EndScene", std::make_shared<EndScene>());
+
 	// Ã¹ ¾À ÁöÁ¤
-	LoadScene(L"Start_Scene");
+	LoadScene(L"StartScene");
 }
 
 void SceneMgr::Update()
