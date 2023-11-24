@@ -194,6 +194,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneMgr.h" />
     <ClInclude Include="SelectGDI.h" />
+    <ClInclude Include="StartButton.h" />
     <ClInclude Include="StartScene.h" />
     <ClInclude Include="Start_Scene.h" />
     <ClInclude Include="SubSceneOne.h" />
@@ -226,6 +227,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneMgr.cpp" />
     <ClCompile Include="SelectGDI.cpp" />
+    <ClCompile Include="StartButton.cpp" />
     <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="Start_Scene.cpp" />
     <ClCompile Include="SubSceneOne.cpp" />
