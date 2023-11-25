@@ -1,12 +1,12 @@
 #pragma once
 #include "Object.h"
 class Texture;
-class StartButton :
+class OutButton :
     public Object
 {
 public:
-    StartButton();
-    ~StartButton();
+    OutButton();
+    ~OutButton();
 
 public:
     void Update() override;

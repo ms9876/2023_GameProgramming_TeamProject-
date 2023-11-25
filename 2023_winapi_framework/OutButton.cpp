@@ -1,21 +1,21 @@
 #include "pch.h"
-#include "StartButton.h"
+#include "OutButton.h"
 #include "ResMgr.h"
 #include "KeyMgr.h"
-#include "Texture.h"
 #include "SceneMgr.h"
+#include "Texture.h"
 
-StartButton::StartButton()
+OutButton::OutButton()
 	: m_pTex(nullptr)
 {
-	m_pTex = ResMgr::GetInst()->TexLoad(L"StartButton", L"Texture\\StartButton.bmp");
+	m_pTex = ResMgr::GetInst()->TexLoad(L"OutButton", L"Texture\\OutButton.bmp");
 }
 
-StartButton::~StartButton()
+OutButton::~OutButton()
 {
 }
 
-void StartButton::Update()
+void OutButton::Update()
 {
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();
@@ -23,11 +23,11 @@ void StartButton::Update()
 		&& (vPos.y - vScale.y / 2) < KeyMgr::GetInst()->GetMousePos().y && (vPos.y + vScale.y / 2) > KeyMgr::GetInst()->GetMousePos().y)
 	{
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
-			SceneMgr::GetInst()->LoadScene(L"MainScene");
+			PostQuitMessage(0);
 	}
 }
 
-void StartButton::Render(HDC _dc)
+void OutButton::Render(HDC _dc)
 {
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();

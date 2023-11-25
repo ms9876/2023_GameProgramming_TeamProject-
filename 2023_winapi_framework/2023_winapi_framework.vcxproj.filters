@@ -181,6 +181,9 @@
     <ClInclude Include="StartButton.h">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
     </ClInclude>
+    <ClInclude Include="OutButton.h">
+      <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="2023_winapi_framework.rc">
@@ -284,6 +287,9 @@
       <Filter>Engine\04. Object\MainObject\T</Filter>
     </ClCompile>
     <ClCompile Include="StartButton.cpp">
+      <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="OutButton.cpp">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
     </ClCompile>
   </ItemGroup>
