@@ -71,6 +71,12 @@
     <Filter Include="Engine\04. Object\MainObject\Buttons">
       <UniqueIdentifier>{9b478758-8ef7-4c57-a71e-2be7509d58d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object\MainObject\Maps">
+      <UniqueIdentifier>{f0c7ac00-fe70-47ce-837e-e6a4ceba33fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\MainObject\Player">
+      <UniqueIdentifier>{3c262c41-1e89-4cf0-a9bb-e641fadaec7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -151,9 +157,6 @@
     <ClInclude Include="StartScene.h">
       <Filter>Engine\05. Scene\MainScene</Filter>
     </ClInclude>
-    <ClInclude Include="MainScene.h">
-      <Filter>Engine\05. Scene\MainScene</Filter>
-    </ClInclude>
     <ClInclude Include="SubSceneOne.h">
       <Filter>Engine\05. Scene\MainScene</Filter>
     </ClInclude>
@@ -183,6 +186,21 @@
     </ClInclude>
     <ClInclude Include="OutButton.h">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMap_B.h">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPlayer_B.h">
+      <Filter>Engine\04. Object\MainObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPlayer_W.h">
+      <Filter>Engine\04. Object\MainObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene_B.h">
+      <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene_W.h">
+      <Filter>Engine\05. Scene\MainScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -259,9 +277,6 @@
     <ClCompile Include="StartScene.cpp">
       <Filter>Engine\05. Scene\MainScene</Filter>
     </ClCompile>
-    <ClCompile Include="MainScene.cpp">
-      <Filter>Engine\05. Scene\MainScene</Filter>
-    </ClCompile>
     <ClCompile Include="SubSceneOne.cpp">
       <Filter>Engine\05. Scene\MainScene</Filter>
     </ClCompile>
@@ -291,6 +306,21 @@
     </ClCompile>
     <ClCompile Include="OutButton.cpp">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMap_B.cpp">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPlayer_B.cpp">
+      <Filter>Engine\04. Object\MainObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPlayer_W.cpp">
+      <Filter>Engine\04. Object\MainObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene_B.cpp">
+      <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene_W.cpp">
+      <Filter>Engine\05. Scene\MainScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -182,8 +182,12 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Game_Scene.h" />
     <ClInclude Include="KeyMgr.h" />
-    <ClInclude Include="MainScene.h" />
+    <ClInclude Include="MainMap_B.h" />
+    <ClInclude Include="MainScene_B.h" />
+    <ClInclude Include="MainScene_W.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="MyPlayer_B.h" />
+    <ClInclude Include="MyPlayer_W.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OutButton.h" />
     <ClInclude Include="PathMgr.h" />
@@ -218,8 +222,12 @@
     <ClCompile Include="Game_Scene.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="MainMap_B.cpp" />
+    <ClCompile Include="MainScene_B.cpp" />
+    <ClCompile Include="MainScene_W.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MyPlayer_B.cpp" />
+    <ClCompile Include="MyPlayer_W.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OutButton.cpp" />
     <ClCompile Include="PathMgr.cpp" />

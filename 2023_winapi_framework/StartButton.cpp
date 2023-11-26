@@ -23,7 +23,7 @@ void StartButton::Update()
 		&& (vPos.y - vScale.y / 2) < KeyMgr::GetInst()->GetMousePos().y && (vPos.y + vScale.y / 2) > KeyMgr::GetInst()->GetMousePos().y)
 	{
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
-			SceneMgr::GetInst()->LoadScene(L"MainScene");
+			SceneMgr::GetInst()->LoadScene(L"MainScene_B");
 	}
 }
 

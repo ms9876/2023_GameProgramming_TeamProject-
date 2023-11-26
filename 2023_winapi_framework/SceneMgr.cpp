@@ -3,7 +3,8 @@
 #include "Start_Scene.h"
 #include "Game_Scene.h"
 #include "StartScene.h"
-#include "MainScene.h"
+#include "MainScene_B.h"
+#include "MainScene_W.h"
 #include "SubSceneOne.h"
 #include "SubSceneTwo.h"
 #include "EndScene.h"
@@ -18,7 +19,8 @@ void SceneMgr::Init()
 
 	// ¿ì¸® ¾À
 	RegisterScene(L"StartScene", std::make_shared<StartScene>());
-	RegisterScene(L"MainScene", std::make_shared<MainScene>());
+	RegisterScene(L"MainScene_B", std::make_shared<MainScene_B>());
+	RegisterScene(L"MainScene_W", std::make_shared<MainScene_W>());
 	RegisterScene(L"SubSceneOne", std::make_shared<SubSceneOne>());
 	RegisterScene(L"SubSceneTwo", std::make_shared<SubSceneTwo>());
 	RegisterScene(L"EndScene", std::make_shared<EndScene>());

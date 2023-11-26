@@ -26,6 +26,7 @@ void StartScene::Update()
 
 void StartScene::Render(HDC _dc)
 {
+	TextOut(_dc, Core::GetInst()->GetResolution().x / 2 - 52, Core::GetInst()->GetResolution().y / 2 - 200, L"컬러 미로 게임", 8);
 	Scene::Render(_dc);
 }
 

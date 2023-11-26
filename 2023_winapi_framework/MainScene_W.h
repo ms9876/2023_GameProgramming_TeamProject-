@@ -1,6 +1,6 @@
 #pragma once
 #include "Scene.h"
-class MainScene :
+class MainScene_W :
     public Scene
 {
 public:
