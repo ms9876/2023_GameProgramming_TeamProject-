@@ -77,6 +77,9 @@
     <Filter Include="Engine\04. Object\MainObject\Player">
       <UniqueIdentifier>{3c262c41-1e89-4cf0-a9bb-e641fadaec7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object\MainObject\Player\MiniGame">
+      <UniqueIdentifier>{2b6d40be-2ba7-497c-888a-827dcb69f60a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -202,6 +205,9 @@
     <ClInclude Include="MainScene_W.h">
       <Filter>Engine\05. Scene\MainScene</Filter>
     </ClInclude>
+    <ClInclude Include="MyPlayer_JumpMap.h">
+      <Filter>Engine\04. Object\MainObject\Player\MiniGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="2023_winapi_framework.rc">
@@ -321,6 +327,9 @@
     </ClCompile>
     <ClCompile Include="MainScene_W.cpp">
       <Filter>Engine\05. Scene\MainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPlayer_JumpMap.cpp">
+      <Filter>Engine\04. Object\MainObject\Player\MiniGame</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
