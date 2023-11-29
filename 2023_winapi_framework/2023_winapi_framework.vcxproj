@@ -183,6 +183,7 @@
     <ClInclude Include="Game_Scene.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="MainMap_B.h" />
+    <ClInclude Include="MainMap_W.h" />
     <ClInclude Include="MainScene_B.h" />
     <ClInclude Include="MainScene_W.h" />
     <ClInclude Include="Monster.h" />
@@ -224,6 +225,7 @@
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMap_B.cpp" />
+    <ClCompile Include="MainMap_W.cpp" />
     <ClCompile Include="MainScene_B.cpp" />
     <ClCompile Include="MainScene_W.cpp" />
     <ClCompile Include="Monster.cpp" />
