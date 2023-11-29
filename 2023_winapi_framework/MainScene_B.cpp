@@ -12,8 +12,8 @@ void MainScene_B::Init()
 	AddObject(mainMap_B, OBJECT_GROUP::MAP);
 
 	Object* myPlayer_W = new MyPlayer_W;
-	myPlayer_W->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2 })));
-	myPlayer_W->SetScale(Vec2(100.f, 100.f));
+	myPlayer_W->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 - 100, Core::GetInst()->GetResolution().y / 2 - 160})));
+	myPlayer_W->SetScale(Vec2(15.f, 15.f));
 	AddObject(myPlayer_W, OBJECT_GROUP::PLAYER);
 }
 

@@ -19,8 +19,8 @@ void OutButton::Update()
 {
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();
-	if ((vPos.x - vScale.x / 2) < KeyMgr::GetInst()->GetMousePos().x && (vPos.x + vScale.x / 2) > KeyMgr::GetInst()->GetMousePos().x
-		&& (vPos.y - vScale.y / 2) < KeyMgr::GetInst()->GetMousePos().y && (vPos.y + vScale.y / 2) > KeyMgr::GetInst()->GetMousePos().y)
+	if ((vPos.x - vScale.x / 2) < KeyMgr::GetInst()->GetMousePos().x && (vPos.x + vScale.x) > KeyMgr::GetInst()->GetMousePos().x
+		&& (vPos.y - vScale.y / 2) < KeyMgr::GetInst()->GetMousePos().y && (vPos.y + vScale.y / 1000) > KeyMgr::GetInst()->GetMousePos().y)
 	{
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
 			PostQuitMessage(0);
