@@ -208,6 +208,9 @@
     <ClInclude Include="MyPlayer_JumpMap.h">
       <Filter>Engine\04. Object\MainObject\Player\MiniGame</Filter>
     </ClInclude>
+    <ClInclude Include="JumpMap_B.h">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="2023_winapi_framework.rc">
@@ -330,6 +333,9 @@
     </ClCompile>
     <ClCompile Include="MyPlayer_JumpMap.cpp">
       <Filter>Engine\04. Object\MainObject\Player\MiniGame</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpMap_B.cpp">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
