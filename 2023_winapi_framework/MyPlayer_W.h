@@ -14,7 +14,6 @@ public:
 
 private:
     Texture* m_pTex;
-    Texture* m_pMapTex;
 
     COLORREF colorLeft1;
     COLORREF colorLeft2;
@@ -31,5 +30,8 @@ private:
     COLORREF colorBottom1;
     COLORREF colorBottom2;
     COLORREF colorBottom3;
+
+    float currentTime;
+    float waitTime;
 };
 
