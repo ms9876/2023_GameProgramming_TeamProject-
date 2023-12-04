@@ -50,12 +50,12 @@ void MyPlayer_W::Update()
 	colorRight3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2) + 1, (vPos.y + Height / 2));
 
 	colorTop1 = GetPixel(Core::GetInst()->GetBackDC(), vPos.x, (vPos.y - Height / 2) - 2);
-	colorTop2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2) - 2, (vPos.y - Height / 2) - 2);
-	colorTop3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2) + 1, (vPos.y - Height / 2) - 2);
+	colorTop2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2), (vPos.y - Height / 2) - 2);
+	colorTop3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2), (vPos.y - Height / 2) - 2);
 
 	colorBottom1 = GetPixel(Core::GetInst()->GetBackDC(), vPos.x, (vPos.y + Height / 2) + 1);
-	colorBottom2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2) - 2, (vPos.y + Height / 2) + 1);
-	colorBottom3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2) + 1, (vPos.y + Height / 2) + 1);
+	colorBottom2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2), (vPos.y + Height / 2) + 1);
+	colorBottom3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2), (vPos.y + Height / 2) + 1);
 
 	if (KEY_PRESS(KEY_TYPE::A))
 	{
@@ -67,15 +67,13 @@ void MyPlayer_W::Update()
 			if (colorLeft1 == RGB(35, 156, 83) || colorLeft2 == RGB(35, 156, 83) || colorLeft3 == RGB(35, 156, 83))
 			{
 				// 진한 초록
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 20, Core::GetInst()->GetResolution().y / 2 - 120 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Green_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorLeft1 == RGB(0, 0, 201) || colorLeft2 == RGB(0, 0, 201) || colorLeft3 == RGB(0, 0, 201))
 			{
 				// 진한 파랑색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 + 200, Core::GetInst()->GetResolution().y / 2 + 200 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Blue_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 		}
@@ -91,29 +89,25 @@ void MyPlayer_W::Update()
 			if (colorRight1 == RGB(239, 243, 0) || colorRight2 == RGB(239, 243, 0) || colorRight3 == RGB(239, 243, 0))
 			{
 				// 노랑색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 70, Core::GetInst()->GetResolution().y / 2 - 197 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Yellow_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorRight1 == RGB(0, 239, 95) || colorRight2 == RGB(0, 239, 95) || colorRight3 == RGB(0, 239, 95))
 			{
 				// 연두색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 + 27, Core::GetInst()->GetResolution().y / 2 + 20 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LimeGreen_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorRight1 == RGB(254, 214, 203) || colorRight2 == RGB(254, 214, 203) || colorRight3 == RGB(254, 214, 203))
 			{
 				// 연분홍색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 197, Core::GetInst()->GetResolution().y / 2 - 65 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightPink_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorRight1 == RGB(237, 243, 186) || colorRight2 == RGB(237, 243, 186) || colorRight3 == RGB(237, 243, 186))
 			{
 				// 연노랑색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 + 150, Core::GetInst()->GetResolution().y / 2 - 197 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightYellow_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 		}
@@ -129,8 +123,7 @@ void MyPlayer_W::Update()
 			if (colorTop1 == RGB(154, 154, 154) || colorTop2 == RGB(154, 154, 154) || colorTop3 == RGB(154, 154, 154))
 			{
 				// 회색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 + 200, Core::GetInst()->GetResolution().y / 2 - 190 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Gray_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 		}
@@ -145,29 +138,25 @@ void MyPlayer_W::Update()
 			if (colorBottom1 == RGB(160, 123, 113) || colorBottom2 == RGB(160, 123, 113) || colorBottom3 == RGB(160, 123, 113))
 			{
 				// 연갈색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 110, Core::GetInst()->GetResolution().y / 2 + 160 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightBrown_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorBottom1 == RGB(165, 0, 0) || colorBottom2 == RGB(165, 0, 0) || colorBottom3 == RGB(165, 0, 0))
 			{
 				// 빨강색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 197, Core::GetInst()->GetResolution().y / 2 + 100 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Red_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorBottom1 == RGB(112, 181, 254) || colorBottom2 == RGB(112, 181, 254) || colorBottom3 == RGB(112, 181, 254))
 			{
 				// 하늘색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 65, Core::GetInst()->GetResolution().y / 2 + 200 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->SkyBlue_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 			if (colorBottom1 == RGB(165, 102, 255) || colorBottom2 == RGB(165, 102, 255) || colorBottom3 == RGB(165, 102, 255))
 			{
 				// 보라색
-				PosManager::GetInst()->SetPos_B(Vec2({ Core::GetInst()->GetResolution().x / 2 - 100, Core::GetInst()->GetResolution().y / 2 - 110 }));
-				currentTime = 0;
+				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Purple_B);
 				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
 			}
 		}
@@ -177,7 +166,6 @@ void MyPlayer_W::Update()
 
 void MyPlayer_W::Render(HDC _dc)
 {
-	wstring str;
 	Vec2 vPos = GetPos();
 	Vec2 vScale = GetScale();
 	int Width = m_pTex->GetWidth();
