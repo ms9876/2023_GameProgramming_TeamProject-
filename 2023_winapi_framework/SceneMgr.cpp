@@ -26,7 +26,8 @@ void SceneMgr::Init()
 	RegisterScene(L"EndScene", std::make_shared<EndScene>());
 
 	// Ã¹ ¾À ÁöÁ¤
-	LoadScene(L"StartScene");
+	//LoadScene(L"StartScene");
+	LoadScene(L"SubSceneOne");
 }
 
 void SceneMgr::Update()
