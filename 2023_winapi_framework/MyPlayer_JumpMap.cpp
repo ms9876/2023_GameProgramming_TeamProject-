@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "TimeMgr.h"
 #include "Collider.h"
+#include "RigidBody.h"
 
 MyPlayer_JumpMap::MyPlayer_JumpMap() : m_pTex(nullptr), m_bIsJumping(false), m_fJumpVelocity(0.0f)
 {
@@ -72,9 +73,11 @@ void MyPlayer_JumpMap::Render(HDC _dc)
 void MyPlayer_JumpMap::Jump(Vec2 vPos)
 {
 	m_fJumpVelocity = 20.0f;
-	m_bIsJumping = true;
-	
 	vPos.y -= 50.f;
+	m_bIsJumping = true;
+
+
+	//Vec2 dir = GetRigidBody()->GetVelocity(); 
 
 	SetPos(vPos);
 

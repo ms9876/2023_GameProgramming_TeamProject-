@@ -1,6 +1,8 @@
 #pragma once
 class Collider;
 class Animator;
+class RigidBody;
+
 class Object
 {
 public:
@@ -28,6 +30,10 @@ public:
 	{
 		return m_pAnimator;
 	}
+	RigidBody* GetRigidBody()
+	{ 
+		return m_pRigidbody;
+	}
 	const wstring& GetName() const { return m_strName; }
 	void SetName(wstring _name) { m_strName = _name; }
 	bool GetIsDead() const { return !m_IsAlive; }
@@ -44,5 +50,6 @@ private:
 	wstring m_strName; // ¿Ã∏ß.
 	bool m_IsAlive;
 	Animator* m_pAnimator;
+	RigidBody* m_pRigidbody;
 };
 

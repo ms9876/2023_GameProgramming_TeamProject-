@@ -23,7 +23,7 @@ void RigidBody::Update()
 	{
 		// πÊ«‚
 		_force.Normalize();
-
+			
 		float accel = force / _mass;
 
 		_accel = _force * accel;

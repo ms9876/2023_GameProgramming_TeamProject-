@@ -27,7 +27,7 @@ void SceneMgr::Init()
 
 	// Ã¹ ¾À ÁöÁ¤
 	//LoadScene(L"StartScene");
-	LoadScene(L"SubSceneOne");
+	LoadScene(L"EndScene");
 }
 
 void SceneMgr::Update()
