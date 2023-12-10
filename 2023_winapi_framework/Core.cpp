@@ -118,10 +118,13 @@ void Core::CreateGDI()
 {
 	// HOLLOW
 	m_arrBrush[(UINT)BRUSH_TYPE::HOLLOW] = (HBRUSH)GetStockObject(HOLLOW_BRUSH);
-	m_arrBrush[(UINT)BRUSH_TYPE::RED] = (HBRUSH)CreateSolidBrush(RGB(255, 167, 167));
-	m_arrBrush[(UINT)BRUSH_TYPE::GREEN] = (HBRUSH)CreateSolidBrush(RGB(134, 229, 134));
-	m_arrBrush[(UINT)BRUSH_TYPE::BLUE] = (HBRUSH)CreateSolidBrush(RGB(103, 153, 255));
-	m_arrBrush[(UINT)BRUSH_TYPE::YELLOW] = (HBRUSH)CreateSolidBrush(RGB(255, 187, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::RED] = (HBRUSH)CreateSolidBrush(RGB(255, 0, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::ORANGE] = (HBRUSH)CreateSolidBrush(RGB(255, 165, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::YELLOW] = (HBRUSH)CreateSolidBrush(RGB(255, 255, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::GREEN] = (HBRUSH)CreateSolidBrush(RGB(0, 128, 0));
+	m_arrBrush[(UINT)BRUSH_TYPE::BLUE] = (HBRUSH)CreateSolidBrush(RGB(0, 0, 255));
+	m_arrBrush[(UINT)BRUSH_TYPE::NAVYBLUE] = (HBRUSH)CreateSolidBrush(RGB(0, 0, 128));
+	m_arrBrush[(UINT)BRUSH_TYPE::PURPLE] = (HBRUSH)CreateSolidBrush(RGB(128, 0, 128));
 
 	//RED GREEN BLUE PEN
 	m_arrPen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));

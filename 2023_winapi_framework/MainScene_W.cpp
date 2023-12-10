@@ -7,6 +7,8 @@
 
 void MainScene_W::Init()
 {
+	PosManager::GetInst()->SetBool(true);
+
 	Object* mainMap_W = new MainMap_W; // Èò»ö¸Ê
 	mainMap_W->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 10, Core::GetInst()->GetResolution().y / 10 })));
 	mainMap_W->SetScale(Vec2(100.f, 100.f));

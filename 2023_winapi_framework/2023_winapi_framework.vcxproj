@@ -208,6 +208,7 @@
     <ClInclude Include="Start_Scene.h" />
     <ClInclude Include="SubSceneOne.h" />
     <ClInclude Include="SubSceneTwo.h" />
+    <ClInclude Include="SubTwoMap.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TimeMgr.h" />
@@ -250,6 +251,7 @@
     <ClCompile Include="Start_Scene.cpp" />
     <ClCompile Include="SubSceneOne.cpp" />
     <ClCompile Include="SubSceneTwo.cpp" />
+    <ClCompile Include="SubTwoMap.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TimeMgr.cpp" />
     <ClCompile Include="Vec2.cpp" />

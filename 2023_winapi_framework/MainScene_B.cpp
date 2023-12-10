@@ -7,6 +7,8 @@
 
 void MainScene_B::Init()
 {
+	PosManager::GetInst()->SetBool(false);
+
 	Object* mainMap_B = new MainMap_B; // °ËÁ¤»ö ¸Ê
 	mainMap_B->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 10, Core::GetInst()->GetResolution().y / 10 })));
 	mainMap_B->SetScale(Vec2(100.f, 100.f));

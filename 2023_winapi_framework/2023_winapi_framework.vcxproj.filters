@@ -220,6 +220,9 @@
     <ClInclude Include="PosManager.h">
       <Filter>Engine\03. Manager\PosManager</Filter>
     </ClInclude>
+    <ClInclude Include="SubTwoMap.h">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="2023_winapi_framework.rc">
@@ -351,6 +354,9 @@
     </ClCompile>
     <ClCompile Include="PosManager.cpp">
       <Filter>Engine\03. Manager\PosManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SubTwoMap.cpp">
+      <Filter>Engine\04. Object\MainObject\Maps</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

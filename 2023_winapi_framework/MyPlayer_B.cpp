@@ -28,6 +28,7 @@ MyPlayer_B::MyPlayer_B()
 	, waitTime(1.5f)
 {
 	m_pTex = ResMgr::GetInst()->TexLoad(L"MyPlayer_B", L"Texture\\Player_B.bmp");
+	// 여기서 SetPos(); 해보자 그럼 순간 이동 할때 버그가 없을 수 있다.
 }
 
 MyPlayer_B::~MyPlayer_B()
@@ -59,6 +60,11 @@ void MyPlayer_B::Update()
 	colorBottom2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2), (vPos.y + Height / 2) + 1);
 	colorBottom3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2), (vPos.y + Height / 2) + 1);
 
+	if (vPos.y >= Core::GetInst()->GetResolution().y / 2 + 230)
+	{
+		SceneMgr::GetInst()->LoadScene(L"EndScene");
+	}
+
 	if (KEY_PRESS(KEY_TYPE::A))
 	{
 		if (colorLeft1 != RGB(0, 0, 0) && colorLeft2 != RGB(0, 0, 0) && colorLeft3 != RGB(0, 0, 0))
@@ -69,7 +75,7 @@ void MyPlayer_B::Update()
 			{
 				// 보라색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Purple_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 	}
@@ -84,19 +90,19 @@ void MyPlayer_B::Update()
 			{
 				// 노랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Yellow_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorRight1 == RGB(237, 243, 186) || colorRight2 == RGB(237, 243, 186) || colorRight3 == RGB(237, 243, 186))
 			{
 				// 연노랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightYellow_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorRight1 == RGB(254, 214, 203) || colorRight2 == RGB(254, 214, 203) || colorRight3 == RGB(254, 214, 203))
 			{
 				// 연분홍색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightPink_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 	}
@@ -111,13 +117,13 @@ void MyPlayer_B::Update()
 			{
 				// 회색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Gray_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorTop1 == RGB(160, 123, 113) || colorTop2 == RGB(160, 123, 113) || colorTop3 == RGB(160, 123, 113))
 			{
 				// 연갈색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightBrown_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 	}
@@ -132,31 +138,31 @@ void MyPlayer_B::Update()
 			{
 				// 진한 초록색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Green_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(165, 0, 0) || colorBottom2 == RGB(165, 0, 0) || colorBottom3 == RGB(165, 0, 0))
 			{
 				// 빨강색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Red_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(112, 181, 254) || colorBottom2 == RGB(112, 181, 254) || colorBottom3 == RGB(112, 181, 254))
 			{
 				// 하늘색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->SkyBlue_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(0, 239, 95) || colorBottom2 == RGB(0, 239, 95) || colorBottom3 == RGB(0, 239, 95))
 			{
 				// 연두색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LimeGreen_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(0, 0, 201) || colorBottom2 == RGB(0, 0, 201) || colorBottom3 == RGB(0, 0, 201))
 			{
 				// 진한 파랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Blue_W);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 		

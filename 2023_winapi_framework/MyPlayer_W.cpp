@@ -68,13 +68,13 @@ void MyPlayer_W::Update()
 			{
 				// 진한 초록
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Green_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorLeft1 == RGB(0, 0, 201) || colorLeft2 == RGB(0, 0, 201) || colorLeft3 == RGB(0, 0, 201))
 			{
 				// 진한 파랑색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Blue_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 		
@@ -90,25 +90,25 @@ void MyPlayer_W::Update()
 			{
 				// 노랑색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Yellow_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorRight1 == RGB(0, 239, 95) || colorRight2 == RGB(0, 239, 95) || colorRight3 == RGB(0, 239, 95))
 			{
 				// 연두색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LimeGreen_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorRight1 == RGB(254, 214, 203) || colorRight2 == RGB(254, 214, 203) || colorRight3 == RGB(254, 214, 203))
 			{
 				// 연분홍색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightPink_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorRight1 == RGB(237, 243, 186) || colorRight2 == RGB(237, 243, 186) || colorRight3 == RGB(237, 243, 186))
 			{
 				// 연노랑색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightYellow_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 		
@@ -124,7 +124,7 @@ void MyPlayer_W::Update()
 			{
 				// 회색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Gray_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 	}
@@ -139,25 +139,25 @@ void MyPlayer_W::Update()
 			{
 				// 연갈색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->LightBrown_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(165, 0, 0) || colorBottom2 == RGB(165, 0, 0) || colorBottom3 == RGB(165, 0, 0))
 			{
 				// 빨강색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Red_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(112, 181, 254) || colorBottom2 == RGB(112, 181, 254) || colorBottom3 == RGB(112, 181, 254))
 			{
 				// 하늘색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->SkyBlue_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 			if (colorBottom1 == RGB(165, 102, 255) || colorBottom2 == RGB(165, 102, 255) || colorBottom3 == RGB(165, 102, 255))
 			{
 				// 보라색
 				PosManager::GetInst()->SetPos_B(PosManager::GetInst()->Purple_B);
-				SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+				SceneMgr::GetInst()->LoadScene(L"SubSceneTwo");
 			}
 		}
 	}
