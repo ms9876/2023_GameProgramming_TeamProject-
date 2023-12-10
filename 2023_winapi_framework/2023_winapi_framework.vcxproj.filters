@@ -82,6 +82,8 @@
     </Filter>
     <Filter Include="Engine\03. Manager\PosManager">
       <UniqueIdentifier>{5051849f-acda-4e9e-add0-6ce626bdb5d3}</UniqueIdentifier>
+    <Filter Include="Engine\07. Component\RigidBody">
+      <UniqueIdentifier>{b31524a8-db72-47d4-b2a2-d541b6937a41}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +224,12 @@
     </ClInclude>
     <ClInclude Include="SubTwoMap.h">
       <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    <ClInclude Include="MainMap_W.h" />
+    <ClInclude Include="RigidBody.h">
+      <Filter>Engine\07. Component\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="ReStartButton.h">
+      <Filter>Engine\04. Object\MainObject\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -357,6 +365,12 @@
     </ClCompile>
     <ClCompile Include="SubTwoMap.cpp">
       <Filter>Engine\04. Object\MainObject\Maps</Filter>
+    <ClCompile Include="MainMap_W.cpp" />
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Engine\07. Component\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="ReStartButton.cpp">
+      <Filter>Engine\04. Object\MainObject\Buttons</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

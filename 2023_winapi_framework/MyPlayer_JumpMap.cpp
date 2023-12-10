@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "TimeMgr.h"
 #include "Collider.h"
+#include "RigidBody.h"
 
 MyPlayer_JumpMap::MyPlayer_JumpMap() : m_pTex(nullptr), m_bIsJumping(false), m_fJumpVelocity(0.0f)
 {
@@ -45,6 +46,7 @@ void MyPlayer_JumpMap::Update()
 		if (!m_bIsJumping) {
 			Jump(vPos);
 		}
+
 	}
 
 	vPos = GetPos();
@@ -71,9 +73,11 @@ void MyPlayer_JumpMap::Render(HDC _dc)
 void MyPlayer_JumpMap::Jump(Vec2 vPos)
 {
 	m_fJumpVelocity = 20.0f;
+	vPos.y -= 50.f;
 	m_bIsJumping = true;
 
-	vPos.y -= 50.f;
+
+	//Vec2 dir = GetRigidBody()->GetVelocity(); 
 
 	SetPos(vPos);
 
@@ -81,12 +85,12 @@ void MyPlayer_JumpMap::Jump(Vec2 vPos)
 
 void MyPlayer_JumpMap::Gravity(Vec2 vPos)
 {
-	vPos.y += m_fJumpVelocity * fDT;
+	vPos.y += m_fJumpVelocity * fDT * 5.f;
 		
 	m_fJumpVelocity -= 10.0f * fDT;
 
 	if (m_fJumpVelocity <= 0.0f) {  // 이거 콜라이더 부분으로 나중에 바꿔주기
-		vPos.y = 0.0f;
+		//vPos.y = 0.0f;
 		m_bIsJumping = false;
 		m_fJumpVelocity = 0.0f;
 	}
