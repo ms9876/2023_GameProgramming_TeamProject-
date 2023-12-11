@@ -6,8 +6,6 @@
 void SubSceneTwo::Init()
 {
 	Object* map = new SubTwoMap;
-	//map->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 10, Core::GetInst()->GetResolution().y / 10 })));
-	//map->SetScale(Vec2(100.f, 100.f));
 	AddObject(map, OBJECT_GROUP::MAP);
 }
 
