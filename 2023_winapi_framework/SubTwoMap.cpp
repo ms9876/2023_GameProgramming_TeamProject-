@@ -27,7 +27,7 @@ void SubTwoMap::Update()
 {
 	checkTime += fDT;
 	currentTime += fDT;
-	if (pressCount >= winCount)
+	if (pressCount == winCount)
 	{
 		if (PosManager::GetInst()->GetBool() == false)
 			SceneMgr::GetInst()->LoadScene(L"MainScene_W");
@@ -45,7 +45,7 @@ void SubTwoMap::Update()
 	case 1:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::RED);
-		if (KEY_PRESS(KEY_TYPE::R))
+		if (KEY_PRESS(KEY_TYPE::R) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -56,7 +56,7 @@ void SubTwoMap::Update()
 	case 2:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::ORANGE);
-		if (KEY_PRESS(KEY_TYPE::O))
+		if (KEY_PRESS(KEY_TYPE::O) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -67,7 +67,7 @@ void SubTwoMap::Update()
 	case 3:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::YELLOW);
-		if (KEY_PRESS(KEY_TYPE::Y))
+		if (KEY_PRESS(KEY_TYPE::Y) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -78,7 +78,7 @@ void SubTwoMap::Update()
 	case 4:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::GREEN);
-		if (KEY_PRESS(KEY_TYPE::G))
+		if (KEY_PRESS(KEY_TYPE::G) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -89,7 +89,7 @@ void SubTwoMap::Update()
 	case 5:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::BLUE);
-		if (KEY_PRESS(KEY_TYPE::B))
+		if (KEY_PRESS(KEY_TYPE::B) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -100,7 +100,7 @@ void SubTwoMap::Update()
 	case 6:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::NAVYBLUE);
-		if (KEY_PRESS(KEY_TYPE::N))
+		if (KEY_PRESS(KEY_TYPE::N) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -111,7 +111,7 @@ void SubTwoMap::Update()
 	case 7:
 	{
 		brush = Core::GetInst()->GetBrush(BRUSH_TYPE::PURPLE);
-		if (KEY_PRESS(KEY_TYPE::P))
+		if (KEY_PRESS(KEY_TYPE::P) && currentTime > 0.5f)
 		{
 			pressCount++;
 			currentTime = 0;
@@ -127,4 +127,11 @@ void SubTwoMap::Update()
 void SubTwoMap::Render(HDC _dc)
 {
 	FillRect(_dc, &rect, brush);
+	wstring s;
+	SetBkMode(_dc, TRANSPARENT);
+	s = std::to_wstring(pressCount);
+	TextOut(_dc, 0, 0, s.c_str(), s.length());
+	s = std::to_wstring(winCount);
+	TextOut(_dc, 0, 20, s.c_str(), s.length());
+
 }

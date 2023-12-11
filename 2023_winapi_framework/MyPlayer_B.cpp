@@ -60,11 +60,6 @@ void MyPlayer_B::Update()
 	colorBottom2 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x - Width / 2), (vPos.y + Height / 2) + 1);
 	colorBottom3 = GetPixel(Core::GetInst()->GetBackDC(), (vPos.x + Width / 2), (vPos.y + Height / 2) + 1);
 
-	if (vPos.y >= Core::GetInst()->GetResolution().y / 2 + 230)
-	{
-		SceneMgr::GetInst()->LoadScene(L"EndScene");
-	}
-
 	if (KEY_PRESS(KEY_TYPE::A))
 	{
 		if (colorLeft1 != RGB(0, 0, 0) && colorLeft2 != RGB(0, 0, 0) && colorLeft3 != RGB(0, 0, 0))
