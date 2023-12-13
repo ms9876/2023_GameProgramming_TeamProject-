@@ -25,7 +25,7 @@ void EndScene::Update()
 }
 
 void EndScene::Render(HDC _dc)
-{
+{	
 	TextOut(_dc, Core::GetInst()->GetResolution().x / 2 - 65, Core::GetInst()->GetResolution().y / 2 - 160, L"CLEAR THE MAZE!!", 16);
 	Scene::Render(_dc);
 }
