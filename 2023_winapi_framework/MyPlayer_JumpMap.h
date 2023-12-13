@@ -16,6 +16,8 @@ public:
 private:
 	Texture* m_pTex;
 	bool m_bIsJumping;   
+	bool m_bIsGravity;   
 	float m_fJumpVelocity;
+	float m_fJumpSum;
 };
 

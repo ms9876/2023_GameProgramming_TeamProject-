@@ -80,9 +80,6 @@
     <Filter Include="Engine\04. Object\MainObject\Player\MiniGame">
       <UniqueIdentifier>{2b6d40be-2ba7-497c-888a-827dcb69f60a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\07. Component\RigidBody">
-      <UniqueIdentifier>{b31524a8-db72-47d4-b2a2-d541b6937a41}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -215,11 +212,11 @@
       <Filter>Engine\04. Object\MainObject\Maps</Filter>
     </ClInclude>
     <ClInclude Include="MainMap_W.h" />
-    <ClInclude Include="RigidBody.h">
-      <Filter>Engine\07. Component\RigidBody</Filter>
-    </ClInclude>
     <ClInclude Include="ReStartButton.h">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>Engine\07. Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -348,11 +345,11 @@
       <Filter>Engine\04. Object\MainObject\Maps</Filter>
     </ClCompile>
     <ClCompile Include="MainMap_W.cpp" />
-    <ClCompile Include="RigidBody.cpp">
-      <Filter>Engine\07. Component\RigidBody</Filter>
-    </ClCompile>
     <ClCompile Include="ReStartButton.cpp">
       <Filter>Engine\04. Object\MainObject\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Engine\07. Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
