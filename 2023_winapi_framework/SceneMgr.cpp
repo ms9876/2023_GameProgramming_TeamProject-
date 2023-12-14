@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "SceneMgr.h"
-#include "Start_Scene.h"
 #include "StartScene.h"
 #include "MainScene_B.h"
 #include "MainScene_W.h"
@@ -12,8 +11,6 @@ void SceneMgr::Init()
 {
 	m_pCurScene = nullptr;
 	// ¾À µî·Ï
-	// ¼±»ý´Ô ¾À
-	RegisterScene(L"Start_Scene",std::make_shared<Start_Scene>());
 
 	// ¿ì¸® ¾À
 	RegisterScene(L"StartScene", std::make_shared<StartScene>());

@@ -20,6 +20,8 @@ void StartScene::Init()
 	AddObject(pOutButton, OBJECT_GROUP::PRESSBUTTON);
 
 	ResMgr::GetInst()->LoadSound(L"Click", L"Sound\\Coin-1.wav", false);
+	ResMgr::GetInst()->LoadSound(L"BGM", L"Sound\\BGM.wav", true);
+	ResMgr::GetInst()->Play(L"BGM");
 }
 
 void StartScene::Update()

@@ -194,7 +194,6 @@
     <ClInclude Include="OutButton.h" />
     <ClInclude Include="PathMgr.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayTimeMgr.h" />
     <ClInclude Include="PosManager.h" />
     <ClInclude Include="Res.h" />
@@ -207,7 +206,6 @@
     <ClInclude Include="SelectGDI.h" />
     <ClInclude Include="StartButton.h" />
     <ClInclude Include="StartScene.h" />
-    <ClInclude Include="Start_Scene.h" />
     <ClInclude Include="SubSceneOne.h" />
     <ClInclude Include="SubSceneTwo.h" />
     <ClInclude Include="SubTwoMap.h" />
@@ -240,7 +238,6 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OutButton.cpp" />
     <ClCompile Include="PathMgr.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayTimeMgr.cpp" />
     <ClCompile Include="PosManager.cpp" />
     <ClCompile Include="Res.cpp" />
@@ -252,7 +249,6 @@
     <ClCompile Include="SelectGDI.cpp" />
     <ClCompile Include="StartButton.cpp" />
     <ClCompile Include="StartScene.cpp" />
-    <ClCompile Include="Start_Scene.cpp" />
     <ClCompile Include="SubSceneOne.cpp" />
     <ClCompile Include="SubSceneTwo.cpp" />
     <ClCompile Include="SubTwoMap.cpp" />
