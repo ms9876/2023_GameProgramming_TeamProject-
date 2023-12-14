@@ -4,6 +4,8 @@
 #include "KeyMgr.h"
 #include "Texture.h"
 #include "SceneMgr.h"
+#include "PosManager.h"
+#include "PlayTimeMgr.h"
 
 ReStartButton::ReStartButton()
 	: m_pTex(nullptr)
@@ -24,7 +26,11 @@ void ReStartButton::Update()
 		&& (vPos.y - vScale.y / 2) < KeyMgr::GetInst()->GetMousePos().y && (vPos.y + vScale.y / 1000) > KeyMgr::GetInst()->GetMousePos().y)
 	{
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
+		{
+			PosManager::GetInst()->Init();
+			PlayTimeMgr::GetInst()->Init();
 			SceneMgr::GetInst()->LoadScene(L"StartScene");
+		}
 	}
 }
 

@@ -9,9 +9,11 @@ public:
     ~MainMap_W();
 
 public:
+    void Update() override;
     virtual void Render(HDC _dc) override;
 
 private:
     Texture* m_pTex;
+    float time;
 };
 

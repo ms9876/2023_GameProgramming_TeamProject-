@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "SceneMgr.h"
 #include "PosManager.h"
+#include "PlayTimeMgr.h"
 
 StartButton::StartButton()
 	: m_pTex(nullptr)
@@ -26,6 +27,7 @@ void StartButton::Update()
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
 		{
 			PosManager::GetInst()->Init();
+			PlayTimeMgr::GetInst()->Init();
 			SceneMgr::GetInst()->LoadScene(L"MainScene_B");
 		}
 	}

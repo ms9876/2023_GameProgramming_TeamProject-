@@ -12,5 +12,6 @@ public:
 
 private:
     Texture* m_pTex;
+    float time;
 };
 

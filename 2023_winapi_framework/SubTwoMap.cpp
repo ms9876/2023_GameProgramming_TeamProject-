@@ -5,6 +5,7 @@
 #include "PosManager.h"
 #include "SceneMgr.h"
 #include "Core.h"
+#include "PlayTimeMgr.h"
 
 SubTwoMap::SubTwoMap()
 	:currentTime(0)
@@ -15,6 +16,7 @@ SubTwoMap::SubTwoMap()
 	,pressCount(0)
 	,winCount(5)
 	,brush(nullptr)
+	,time(PlayTimeMgr::GetInst()->GetPlayTime())
 {
 	GetClientRect(Core::GetInst()->GetHwnd(), &rect);
 }
@@ -27,6 +29,8 @@ void SubTwoMap::Update()
 {
 	checkTime += fDT;
 	currentTime += fDT;
+	time += fDT;
+	PlayTimeMgr::GetInst()->SetPlayTime(time);
 	if (pressCount == winCount)
 	{
 		if (PosManager::GetInst()->GetBool() == false)
@@ -133,4 +137,6 @@ void SubTwoMap::Render(HDC _dc)
 	TextOut(_dc, 0, 0, s.c_str(), s.length());
 	s = std::to_wstring(winCount);
 	TextOut(_dc, 0, 20, s.c_str(), s.length());
+	s = std::to_wstring(time);
+	TextOut(_dc, 100, 0, s.c_str(), s.length());
 }

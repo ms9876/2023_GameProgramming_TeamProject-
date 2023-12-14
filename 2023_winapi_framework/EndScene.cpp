@@ -5,6 +5,7 @@
 #include "KeyMgr.h"
 #include "SceneMgr.h"
 #include "Core.h"
+#include "PlayTimeMgr.h"
 
 void EndScene::Init()
 {
@@ -17,6 +18,8 @@ void EndScene::Init()
 	pOutButton->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 - 25, Core::GetInst()->GetResolution().y / 2 + 100 })));
 	pOutButton->SetScale(Vec2(100.f, 100.f));
 	AddObject(pOutButton, OBJECT_GROUP::PRESSBUTTON);
+
+	time = PlayTimeMgr::GetInst()->GetPlayTime();
 }
 
 void EndScene::Update()
@@ -26,7 +29,9 @@ void EndScene::Update()
 
 void EndScene::Render(HDC _dc)
 {	
+	wstring s = std::to_wstring(time);
 	TextOut(_dc, Core::GetInst()->GetResolution().x / 2 - 65, Core::GetInst()->GetResolution().y / 2 - 160, L"CLEAR THE MAZE!!", 16);
+	TextOut(_dc, Core::GetInst()->GetResolution().x / 2 - 35, Core::GetInst()->GetResolution().y / 2 - 180, s.c_str(), s.length());
 	Scene::Render(_dc);
 }
 

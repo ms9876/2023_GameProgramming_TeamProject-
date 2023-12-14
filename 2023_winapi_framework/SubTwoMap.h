@@ -16,6 +16,7 @@ private:
     float checkTime;
     float cantpressTime;
     float changeTime;
+    float time;
 
     int currentColor;
     int pressCount;
