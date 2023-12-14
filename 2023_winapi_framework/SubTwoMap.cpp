@@ -133,5 +133,4 @@ void SubTwoMap::Render(HDC _dc)
 	TextOut(_dc, 0, 0, s.c_str(), s.length());
 	s = std::to_wstring(winCount);
 	TextOut(_dc, 0, 20, s.c_str(), s.length());
-
 }
