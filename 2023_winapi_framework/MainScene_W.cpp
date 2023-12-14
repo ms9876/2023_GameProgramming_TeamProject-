@@ -4,6 +4,7 @@
 #include "Core.h"
 #include "MyPlayer_B.h"
 #include "PosManager.h"
+#include "ResMgr.h"
 
 void MainScene_W::Init()
 {
@@ -18,6 +19,8 @@ void MainScene_W::Init()
 	myPlayer_B->SetPos(PosManager::GetInst()->GetPos_B());
 	myPlayer_B->SetScale(Vec2(15.f, 15.f));
 	AddObject(myPlayer_B, OBJECT_GROUP::PLAYER);
+
+	ResMgr::GetInst()->LoadSound(L"Button", L"Sound\\MP_Tiny-Button-Push.wav", false);
 }
 
 void MainScene_W::Update()

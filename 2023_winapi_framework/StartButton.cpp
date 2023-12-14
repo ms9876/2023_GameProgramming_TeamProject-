@@ -26,6 +26,7 @@ void StartButton::Update()
 	{
 		if (KEY_PRESS(KEY_TYPE::LBUTTON))
 		{
+			ResMgr::GetInst()->Play(L"Click");
 			PosManager::GetInst()->Init();
 			PlayTimeMgr::GetInst()->Init();
 			SceneMgr::GetInst()->LoadScene(L"MainScene_B");

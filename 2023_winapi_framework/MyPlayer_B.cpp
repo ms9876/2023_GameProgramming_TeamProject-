@@ -8,6 +8,7 @@
 #include "Texture.h"
 #include "MyPlayer_W.h"
 #include "PosManager.h"
+#include "ResMgr.h"
 
 // 흰맵의 플레이어
 MyPlayer_B::MyPlayer_B()
@@ -70,6 +71,7 @@ void MyPlayer_B::Update()
 			{
 				// 보라색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Purple_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -98,6 +100,7 @@ void MyPlayer_B::Update()
 			{
 				// 노랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Yellow_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -117,6 +120,7 @@ void MyPlayer_B::Update()
 			{
 				// 연노랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightYellow_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -136,6 +140,7 @@ void MyPlayer_B::Update()
 			{
 				// 연분홍색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightPink_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -164,6 +169,7 @@ void MyPlayer_B::Update()
 			{
 				// 회색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Gray_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -183,6 +189,7 @@ void MyPlayer_B::Update()
 			{
 				// 연갈색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LightBrown_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -211,6 +218,7 @@ void MyPlayer_B::Update()
 			{
 				// 진한 초록색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Green_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -230,6 +238,7 @@ void MyPlayer_B::Update()
 			{
 				// 빨강색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Red_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -249,6 +258,7 @@ void MyPlayer_B::Update()
 			{
 				// 하늘색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->SkyBlue_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -268,6 +278,7 @@ void MyPlayer_B::Update()
 			{
 				// 연두색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->LimeGreen_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{
@@ -287,6 +298,7 @@ void MyPlayer_B::Update()
 			{
 				// 진한 파랑색
 				PosManager::GetInst()->SetPos_W(PosManager::GetInst()->Blue_W);
+				ResMgr::GetInst()->Play(L"Button");
 				int random = rand() % 2 + 1;
 				switch (random)
 				{

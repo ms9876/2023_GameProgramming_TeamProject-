@@ -6,6 +6,7 @@
 #include "SceneMgr.h"
 #include "Core.h"
 #include "PlayTimeMgr.h"
+#include "ResMgr.h"
 
 void EndScene::Init()
 {
@@ -18,6 +19,8 @@ void EndScene::Init()
 	pOutButton->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2 - 25, Core::GetInst()->GetResolution().y / 2 + 100 })));
 	pOutButton->SetScale(Vec2(100.f, 100.f));
 	AddObject(pOutButton, OBJECT_GROUP::PRESSBUTTON);
+
+	ResMgr::GetInst()->LoadSound(L"Click", L"Sound\\Coin-1.wav", false);
 
 	time = PlayTimeMgr::GetInst()->GetPlayTime();
 }
