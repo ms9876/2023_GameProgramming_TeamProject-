@@ -1,32 +1,72 @@
 #include "pch.h"
 #include "SubSceneOne.h"
-#include "JumpMap_B.h"
 #include "Core.h"
-#include "MyPlayer_JumpMap.h"
+#include "KeyMgr.h"
+#include "PosManager.h"
+#include "SceneMgr.h"
+
+SubSceneOne::SubSceneOne() :
+    m_score(0)
+{
+}
+
+SubSceneOne::~SubSceneOne()
+{
+}
 
 void SubSceneOne::Init()
 {
-	Object* mainMap_B = new JumpMap_B;
-	mainMap_B->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 10, Core::GetInst()->GetResolution().y / 10 })));
-	mainMap_B->SetScale(Vec2(100.f, 100.f));
-	AddObject(mainMap_B, OBJECT_GROUP::MAP);
-
-	Object* myPlayer_W = new MyPlayer_JumpMap;
-	myPlayer_W->SetPos((Vec2({ Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2 })));
-	myPlayer_W->SetScale(Vec2(100.f, 100.f));
-	AddObject(myPlayer_W, OBJECT_GROUP::PLAYER);
+    for (auto& circle : m_circles) {
+        circle.position.y = static_cast<float>(rand() % (400 - 50) + 100);
+        circle.position.x = static_cast<float>(rand() % (400 - 50) + 25);
+        circle.radius = 25.0f;
+        circle.visible = true;
+    }
 }
 
-void SubSceneOne::Update()
-{
-	Scene::Update();
+
+void SubSceneOne::Update() {
+    if (KEY_PRESS(KEY_TYPE::LBUTTON)) {
+        for (auto& circle : m_circles) {
+            if (circle.visible && IsMouseClickInsideCircle(circle)) {
+                circle.visible = false;
+                m_score++;
+            }
+        }
+    }
+
+    if (m_score == 10) {
+        if (PosManager::GetInst()->GetBool() == false)
+            SceneMgr::GetInst()->LoadScene(L"MainScene_W");
+        else
+            SceneMgr::GetInst()->LoadScene(L"MainScene_B");
+        Init();
+        m_score = 0;
+    }
+    Scene::Update();
 }
 
-void SubSceneOne::Render(HDC _dc)
-{
-	Scene::Render(_dc);
+void SubSceneOne::Render(HDC _dc) {
+    for (const auto& circle : m_circles) {
+        if (circle.visible) {
+            Ellipse(_dc,
+                static_cast<int>(circle.position.x - circle.radius),
+                static_cast<int>(circle.position.y - circle.radius),
+                static_cast<int>(circle.position.x + circle.radius),
+                static_cast<int>(circle.position.y + circle.radius)
+            );
+        }
+    }
+
+    Scene::Render(_dc);
 }
 
-void SubSceneOne::Release()
-{
+bool SubSceneOne::IsMouseClickInsideCircle(const Circle& circle) const {
+    POINT mousePos;
+    GetCursorPos(&mousePos);
+    ScreenToClient(Core::GetInst()->GetHwnd(), &mousePos);
+
+    float distance = sqrt(pow(mousePos.x - circle.position.x, 2) + pow(mousePos.y - circle.position.y, 2));
+
+    return distance < circle.radius;
 }

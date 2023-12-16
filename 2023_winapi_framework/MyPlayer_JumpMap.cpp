@@ -23,19 +23,19 @@ void MyPlayer_JumpMap::Update()
 {
 	Vec2 vPos = GetPos();
 
-	if (KEY_PRESS(KEY_TYPE::LEFT))
+	if (KEY_PRESS(KEY_TYPE::A))
 	{
 		vPos.x -= 50.f * fDT;
 	}
-	if (KEY_PRESS(KEY_TYPE::RIGHT))
+	if (KEY_PRESS(KEY_TYPE::D))
 	{
 		vPos.x += 50.f * fDT;
 	}
-	if (KEY_PRESS(KEY_TYPE::UP))
+	if (KEY_PRESS(KEY_TYPE::W))
 	{
 		vPos.y -= 50.f * fDT;
 	}
-	if (KEY_PRESS(KEY_TYPE::DOWN))
+	if (KEY_PRESS(KEY_TYPE::S))
 	{
 		vPos.y += 50.f * fDT;
 	}
@@ -52,9 +52,9 @@ void MyPlayer_JumpMap::Update()
 
 	vPos = GetPos();
 
-		if (m_bIsGravity) {
-			//Gravity(vPos);
-		}
+	if (m_bIsJumping == false) {
+		Gravity(vPos);
+	}
 }
 
 void MyPlayer_JumpMap::Render(HDC _dc)
@@ -89,6 +89,8 @@ void MyPlayer_JumpMap::Jump(Vec2 vPos)
 
 void MyPlayer_JumpMap::Gravity(Vec2 vPos)
 {
+	SetPos(vPos);
+	
 	vPos.y += m_fJumpVelocity * fDT * 5.f;
 		
 	m_fJumpVelocity -= 10.0f * fDT;
@@ -99,7 +101,6 @@ void MyPlayer_JumpMap::Gravity(Vec2 vPos)
 		m_fJumpVelocity = 0.0f;
 	}
 
-	SetPos(vPos);
 }
 
 
