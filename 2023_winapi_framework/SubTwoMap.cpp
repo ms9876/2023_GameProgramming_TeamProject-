@@ -9,7 +9,7 @@
 
 SubTwoMap::SubTwoMap()
 	:currentTime(0)
-	,changeTime(10.0f)
+	,changeTime(1.0f)
 	,checkTime(0)
 	,cantpressTime(0.5f)
 	,currentColor(rand() % 7 + 1)
