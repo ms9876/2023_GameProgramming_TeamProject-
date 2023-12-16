@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "JumpMap_B.h"
+#include "CollisionMgr.h"
 #include "ResMgr.h"
 #include "Texture.h"
 
@@ -10,6 +11,7 @@ JumpMap_B::JumpMap_B() : m_pTex(nullptr)
 
 JumpMap_B::~JumpMap_B()
 {
+
 }
 
 void JumpMap_B::Render(HDC _dc)

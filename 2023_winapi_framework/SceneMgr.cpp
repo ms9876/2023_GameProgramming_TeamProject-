@@ -1,3 +1,4 @@
+
 #include "pch.h"
 #include "SceneMgr.h"
 #include "StartScene.h"
@@ -23,6 +24,7 @@ void SceneMgr::Init()
 	// Ã¹ ¾À ÁöÁ¤
 	LoadScene(L"StartScene");
 	//LoadScene(L"EndScene");
+	//LoadScene(L"SubSceneOne");
 }
 
 void SceneMgr::Update()
