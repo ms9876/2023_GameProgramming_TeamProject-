@@ -4,6 +4,8 @@
 #include "KeyMgr.h"
 #include "PosManager.h"
 #include "SceneMgr.h"
+#include "PlayTimeMgr.h"
+#include "TimeMgr.h"
 
 SubSceneOne::SubSceneOne() :
     m_score(0)
@@ -16,6 +18,7 @@ SubSceneOne::~SubSceneOne()
 
 void SubSceneOne::Init()
 {
+    time = PlayTimeMgr::GetInst()->GetPlayTime();
     for (auto& circle : m_circles) {
         circle.position.y = static_cast<float>(rand() % (400 - 50) + 100);
         circle.position.x = static_cast<float>(rand() % (400 - 50) + 25);
@@ -26,6 +29,9 @@ void SubSceneOne::Init()
 
 
 void SubSceneOne::Update() {
+    time += fDT;
+    PlayTimeMgr::GetInst()->SetPlayTime(time);
+
     if (KEY_PRESS(KEY_TYPE::LBUTTON)) {
         for (auto& circle : m_circles) {
             if (circle.visible && IsMouseClickInsideCircle(circle)) {
@@ -47,6 +53,11 @@ void SubSceneOne::Update() {
 }
 
 void SubSceneOne::Render(HDC _dc) {
+
+    wstring s;
+    s = std::to_wstring(time);
+    TextOut(_dc, 100, 0, s.c_str(), s.length());
+
     for (const auto& circle : m_circles) {
         if (circle.visible) {
             Ellipse(_dc,

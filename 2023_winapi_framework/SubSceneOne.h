@@ -21,6 +21,7 @@ private:
 
     Circle m_circles[10];
     int m_score;
+    float time;
 
     bool IsMouseClickInsideCircle(const Circle& circle) const;
 };
